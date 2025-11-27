@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './Converter.css'
 import './Converter.js'
 
@@ -8,7 +6,7 @@ function Converter1() {
     return (
         <>
             <div class="converter">
-                <h2>Currency Converter</h2>
+                <h2>💵 Currency Converter</h2>
                 <label class="label">Amount (USD):</label><br />
                 <input class="input" type="number" id="inputAmount" placeholder="Amount" /><br /><br />
                 <label class="label">Convert to:</label><br />

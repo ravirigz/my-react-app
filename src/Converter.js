@@ -24,24 +24,32 @@ function convertCurrency() {
     } else {
         currencyText.textContent = "Invalid input.";
     }
-    
-
-
 }
 
 function convertUnit() {
-    let UnitInput = parseInt(document.querySelector("#inputUnit").value);
-    let UnitRequest = document.querySelector("#convertUnit").value;
-    let UnitText = document.querySelector("#textUnit");
+    let isNull = document.getElementById("inputUnit").value.trim();
+    let unitRequest = document.getElementById("convertUnit").value;
+    let unitText = document.getElementById("textUnit");
 
-    if (UnitRequest === "M") {
-        UnitText.textContent = UnitInput * 0.0006 + " M";
-    } else if (UnitRequest === "MI") {
-        UnitText.textContent = UnitInput + " MI";
-    } else if (UnitRequest === "KM") {
-        UnitText.textContent = UnitInput * 0.62 + " KM";
+    if (isNull === ""){
+        unitText.textContent = "Enter a valid number.";
+        return;
+    }
+
+    let unitInput = parseInt(isNull);
+
+    if (unitInput <= 0) {
+        unitText.textContent = "Enter a positive number.";
+        return;
+    } 
+
+    if (unitRequest === "KM") {
+        let result = unitInput * 1.609344;
+        unitText.textContent = result.toFixed(2) + " KM";
+    } else if (unitRequest === "M") {
+        let result = unitInput * 1609.344;
+        unitText.textContent = result.toFixed(2) + " M";
     } else {
-        UnitText.textContent = "Invalid input!";
-        alert("invalid input!");
+        unitText.textContent = "Invalid input.";
     }
 }
