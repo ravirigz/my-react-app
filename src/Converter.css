@@ -1,5 +1,19 @@
 body {
-    background-color: #f0f0f0;
+    background-color: #e0ded5;
+    color: #88867a;
+}
+
+h2 {
+    margin-top: 5px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
 }
 
 .converter {
@@ -7,9 +21,12 @@ body {
     flex-direction: column;
     align-items: center;
     width: 300px;
-    height: 250px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 2px 5px rgb(124, 124, 124);
+    height: 275px;
+    background-color: rgb(245, 245, 236);
+    /* box-shadow: 0 2px 5px rgb(170, 186, 187); */
+    border-color:#afac97;
+    border-width: 1px;
+    border-style: dashed;
     padding: 40px;
     margin: 20px;
     border-radius: 10px;
@@ -24,9 +41,30 @@ body {
     margin-top: 200px;
 }
 
-.input {
+.input, .dropdown {
     width: 65%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    border-color: #aca99a;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.dropdown {
+    background-color: #e0ded5;
+    color: #88867a;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aca99a;
+    padding: 7px;
+}
+
+.dropdown:hover {
+    background-color: #cecbbb;
 }
 
 .label {
@@ -37,7 +75,6 @@ body {
 
 .button {
     width: 65%;
-    background-color: rgb(68, 163, 104);
     border-width: 0;
     padding: 15px;
     border-radius: 10px;
@@ -51,4 +88,24 @@ body {
     cursor: pointer;
     opacity: 0.7;
     transform: scale(1.1);
+}
+
+#buttonCurrency {
+    background-color: rgb(171, 223, 142);
+}
+
+#buttonUnit {
+    background-color: rgb(236, 190, 104);
+}
+
+#buttonTemperature {
+    background-color: rgb(92, 211, 211);
+}
+
+#buttonTime {
+    background-color: rgb(207, 108, 91);
+}
+
+.textDOM {
+    font-size: 20px;
 }
