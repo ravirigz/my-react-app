@@ -1,16 +1,32 @@
 function convertCurrency() {
-    let currencyInput = parseInt(document.getElementById("inputAmount").value);
+    let isNull = document.getElementById("inputAmount").value.trim();
     let currencyRequest = document.getElementById("convertTo").value;
     let currencyText = document.getElementById("textCurrency");
 
-    if (currencyRequest === "EUR") {
-        currencyText.textContent = currencyInput * 0.93 + " EUR";
-    } else if (currencyRequest === "PHP") {
-        currencyText.textContent = currencyInput * 56.5 + " PHP";
-    } else {
-        currencyText.textContent = "Invalid input!";
-        alert("invalid input!");
+    if (isNull === ""){
+        currencyText.textContent = "Enter a valid number.";
+        return;
     }
+
+    let currencyInput = parseInt(isNull);
+
+    if (currencyInput <= 0) {
+        currencyText.textContent = "Enter a positive number.";
+        return;
+    } 
+
+    if (currencyRequest === "EUR") {
+        let result = currencyInput * 0.8635;
+        currencyText.textContent = result.toFixed(2) + " EUR";
+    } else if (currencyRequest === "PHP") {
+        let result = currencyInput * 58.77;
+        currencyText.textContent = result.toFixed(2) + " PHP";
+    } else {
+        currencyText.textContent = "Invalid input.";
+    }
+    
+
+
 }
 
 function convertUnit() {

@@ -9,10 +9,13 @@ function Converter2() {
 		<>
 			<div class="converter">
 				<h2>Unit Converter</h2>
-				<label>Distance (MI):</label><br />
+				<label class="label">Distance (Miles):</label><br />
 				<input class="input" type="number" id="inputUnit" placeholder="Distance" /><br /><br />
-				<label>Convert to:</label><br />
-				<input class="input" type="text" id="convertUnit" placeholder="M/MI/KM" /><br /><br />
+				<label class="label">Convert to:</label><br />
+                <select class="input" id="convertUnit">
+                    <option value="M">Meters</option>
+                    <option value="KM">Kilometers</option>
+                </select><br /><br />
 				<button class="button" onClick={convertUnit} id="buttonUnit">Convert</button>
 				<p id="textUnit"></p>
 			</div>

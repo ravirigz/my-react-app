@@ -9,17 +9,13 @@ function Converter1() {
         <>
             <div class="converter">
                 <h2>Currency Converter</h2>
-                <label>Amount (USD):</label><br />
+                <label class="label">Amount (USD):</label><br />
                 <input class="input" type="number" id="inputAmount" placeholder="Amount" /><br /><br />
-                <label>Convert to:</label><br />
-                <select id="fruits" name="favorite_fruit">
-                    <option value="">--Please choose an option--</option>
-                    <option value="apple">Apple</option>
-                    <option value="banana">Banana</option>
-                    <option value="orange">Orange</option>
-                    <option value="grape">Grape</option>
-                </select>
-                <input class="input" type="text" id="convertTo" placeholder="EUR/PHP" /><br /><br />
+                <label class="label">Convert to:</label><br />
+                <select class="input" id="convertTo">
+                    <option value="EUR">Euro</option>
+                    <option value="PHP">Philippine Peso</option>
+                </select><br /><br />
                 <button class="button" onClick={convertCurrency} id="buttonCurrency">Convert</button>
                 <p id="textCurrency"></p>
             </div>
