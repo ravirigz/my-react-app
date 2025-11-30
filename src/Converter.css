@@ -13,7 +13,7 @@ body {
 
 h2 {
     color: #000;
-    text-shadow: 2px 2px 0px rgb(206, 200, 196);
+    text-shadow: 1px 2px 0px rgb(206, 200, 196);
     margin-top: 5px;
 }
 
@@ -45,21 +45,35 @@ h2 {
     border-style: solid; 
 }
 
-.heading-container {
+.select-dropdown {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin-top: 200px;
+}
+
+.select-dropdown-from {
+    width: 25%;
+    margin: 5px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 0px #d8d0d8;
+}
+
+.input {
+    margin: 5px;
+    width: 45%;
+    border-radius: 3px;
 }
 
 .input, .dropdown {
-    width: 65%;
     margin-bottom: 20px;
     border-color: #aca99a;
     border-width: 1px;
     border-style: solid;
-    box-shadow: 3px 3px 0px rgb(206, 200, 196);
+    box-shadow: 3px 3px 0px #d8d0d8;
 }
 
 .input:focus {
@@ -67,24 +81,22 @@ h2 {
 }
 
 .dropdown {
-    background-color: #e9e5d5;
-    color: #969280;
+    width: 75%;
     border-style: solid;
-    border-width: 1px;
-    border-color: #aca99a;
+    border-radius: 5px;
     padding: 7px;
-    box-shadow: 3px 3px 0px rgb(206, 200, 196);
+    box-shadow: 3px 3px 0px #d8d0d8;
 }
 
-.dropdown:hover {
-    background-color: #cecbbb;
+.select-dropdown-from:hover, .dropdown:hover {
+    background-color: #dddddd;
 }
 
 .label {
-    width: 65%;
+    width: 75%;
     text-align: left;
     margin-bottom: 5px;
-    text-shadow: 2px 2px 0px rgb(206, 200, 196);
+    text-shadow: 1px 2px 0px #d8d0d8;
 }
 
 .button {
@@ -92,17 +104,16 @@ h2 {
     border-width: 1;
     border-style: solid;
     border-color: #31ad6f;
+    border-radius: 7px;
     background-color: rgb(113, 230, 171);
     padding: 5px;
     font-family: 'Jersey 10';
     color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    text-stroke-width: 1px;
-    text-stroke-color: black;
     font-size: 30px;
     font-weight: bold;
-    box-shadow: 3px 3px 0px rgb(206, 200, 196);
+    box-shadow: 3px 3px 0px #d8d0d8;
 }
 
 .button:hover {

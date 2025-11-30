@@ -9,10 +9,18 @@ function Converter() {
                 <div class="column-container">
                     <div class="converter">
                         <h2>💵 Currency Converter</h2>
-                        <label class="label">Amount (USD):</label><br />
-                        <input class="input" type="number" id="inputAmount" placeholder="Amount" /><br /><br />
+                        <label class="label">Amount:</label><br />
+                        <div class="select-dropdown">
+                            <input class="input" type="number" id="inputAmount" placeholder="Amount" /><br /><br />
+                            <select class="select-dropdown-from" id="convertFrom">
+                            <option value="USD">United States Dollar</option>
+                            <option value="EUR">Euro</option>
+                            <option value="PHP">Philippine Peso</option>
+                        </select><br /><br />
+                        </div>
                         <label class="label">Convert to:</label><br />
                         <select class="dropdown" id="convertTo">
+                            <option value="USD">United States Dollar</option>
                             <option value="EUR">Euro</option>
                             <option value="PHP">Philippine Peso</option>
                         </select><br /><br />
