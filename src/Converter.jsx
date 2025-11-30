@@ -7,7 +7,6 @@ function Converter() {
         <>
             <div class="main-container">
                 <div class="column-container">
-                    
                     <div class="converter">
                         <h2>💵 Currency Converter</h2>
                         <label class="label">Amount:</label><br />

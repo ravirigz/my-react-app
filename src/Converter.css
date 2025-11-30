@@ -126,3 +126,13 @@ h2 {
 .textDOM {
     font-size: 15px;
 }
+
+.input.login-form {
+    width: 75%;
+}
+
+.converter.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
