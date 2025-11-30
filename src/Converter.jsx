@@ -1,18 +1,19 @@
 import { useState } from 'react'
 import './Converter.css'
-import './Converter.js'
+import { convertCurrency, convertUnit, convertTemp, convertTime } from './Converter.js'
 
 function Converter() {
     return (
         <>
             <div class="main-container">
                 <div class="column-container">
+                    
                     <div class="converter">
                         <h2>💵 Currency Converter</h2>
                         <label class="label">Amount:</label><br />
                         <div class="select-dropdown">
                             <input class="input" type="number" id="inputAmount" placeholder="Amount" /><br /><br />
-                            <select class="select-dropdown-from" id="convertFrom">
+                            <select class="select-dropdown-from" id="convertFromCurrency">
                             <option value="USD">United States Dollar</option>
                             <option value="EUR">Euro</option>
                             <option value="PHP">Philippine Peso</option>
@@ -30,10 +31,18 @@ function Converter() {
 
                     <div class="converter">
                         <h2>🛣️ Distance Converter</h2>
-                        <label class="label">Distance (Miles):</label><br />
-                        <input class="input" type="number" id="inputUnit" placeholder="Distance" /><br /><br />
+                        <label class="label">Amount:</label><br />
+                        <div class="select-dropdown">
+                            <input class="input" type="number" id="inputUnit" placeholder="Distance" /><br /><br />
+                            <select class="select-dropdown-from" id="convertFromDistance">
+                            <option value="MI">Miles</option>   
+                            <option value="M">Meters</option>
+                            <option value="KM">Kilometers</option>
+                        </select><br /><br />
+                        </div>
                         <label class="label">Convert to:</label><br />
                         <select class="dropdown" id="convertUnit">
+                            <option value="MI">Miles</option>   
                             <option value="M">Meters</option>
                             <option value="KM">Kilometers</option>
                         </select><br /><br />
@@ -45,29 +54,46 @@ function Converter() {
                 <div class="column-container">
                     <div class="converter">
                         <h2>🌡️ Temperature Converter</h2>
-                        <label class="label">Amount (USD):</label><br />
-                        <input class="input" type="number" id="inputAmount" placeholder="Amount" /><br /><br />
-                        <label class="label">Convert to:</label><br />
-                        <select class="dropdown" id="convertTo">
-                            <option value="EUR">Euro</option>
-                            <option value="PHP">Philippine Peso</option>
+                        <label class="label">Amount:</label><br />
+                        <div class="select-dropdown">
+                            <input class="input" type="number" id="inputTemp" placeholder="Temperature" /><br /><br />
+                            <select class="select-dropdown-from" id="convertFromTemp">
+                            <option value="C">Celsius</option>
+                            <option value="F">Fahrenheit</option>
+                            <option value="K">Kelvin</option>
                         </select><br /><br />
-                        <button class="button" onClick={convertCurrency} id="buttonTemperature">Convert</button>
-                        <p class="textDOM" id="textCurrency"></p>
+                        </div>
+                        <label class="label">Convert to:</label><br />
+                        <select class="dropdown" id="convertToTemp">
+                            <option value="C">Celsius</option>
+                            <option value="F">Fahrenheit</option>
+                            <option value="K">Kelvin</option>
+                        </select><br /><br />
+                        <button class="button" onClick={convertTemp} id="buttonTemp">Convert</button>
+                        <p class="textDOM" id="textTemp"></p>
                     </div>
 
                     <div class="converter">
                         <h2>⏰ Time Converter</h2>
-                        <label class="label">Distance (Miles):</label><br />
-                        <input class="input" type="number" id="inputUnit" placeholder="Distance" /><br /><br />
+                        <label class="label">Amount:</label><br />
+                        <div class="select-dropdown">
+                            <input class="input" type="number" id="inputTime" placeholder="Duration" /><br /><br />
+                            <select class="select-dropdown-from" id="convertFromTime">
+                                <option value="H">Hours</option>
+                                <option value="M">Minutes</option>
+                                <option value="S">Seconds</option>
+                            </select><br /><br />
+                        </div>
                         <label class="label">Convert to:</label><br />
-                        <select class="dropdown" id="convertUnit">
-                            <option value="M">Meters</option>
-                            <option value="KM">Kilometers</option>
+                        <select class="dropdown" id="convertToTime">
+                            <option value="H">Hours</option>
+                            <option value="M">Minutes</option>
+                            <option value="S">Seconds</option>
                         </select><br /><br />
-                        <button class="button" onClick={convertUnit} id="buttonTime">Convert</button>
-                        <p class="textDOM" id="textUnit"></p>
+                        <button class="button" onClick={convertTime} id="buttonTime">Convert</button>
+                        <p class="textDOM" id="textTime"></p>
                     </div>
+
                 </div>
             </div>
         </>
