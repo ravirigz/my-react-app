@@ -1,9 +1,19 @@
+* {
+    image-rendering: pixelated;
+    font-family: 'Tiny5';
+}
+
 body {
-    background-color: #e0ded5;
-    color: #88867a;
+    background-image: URL("/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    color: #000000;
 }
 
 h2 {
+    color: #000;
+    text-shadow: 2px 2px 0px rgb(206, 200, 196);
     margin-top: 5px;
 }
 
@@ -22,21 +32,23 @@ h2 {
     align-items: center;
     width: 300px;
     height: 275px;
-    background-color: rgb(245, 245, 236);
-    /* box-shadow: 0 2px 5px rgb(170, 186, 187); */
-    border-color:#afac97;
-    border-width: 1px;
-    border-style: dashed;
+    background-color: rgb(251, 255, 240);
+    background-clip: padding-box;
     padding: 40px;
     margin: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
+    border-image-slice: 6 6 6 6;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: round round;
+    border-image-source: url("/public/border.png");
+    border-style: solid; 
 }
 
 .heading-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Comic Sans MS";
     width: 100%;
     margin-top: 200px;
 }
@@ -47,6 +59,7 @@ h2 {
     border-color: #aca99a;
     border-width: 1px;
     border-style: solid;
+    box-shadow: 3px 3px 0px rgb(206, 200, 196);
 }
 
 .input:focus {
@@ -54,13 +67,13 @@ h2 {
 }
 
 .dropdown {
-    background-color: #e0ded5;
-    color: #88867a;
-    border-radius: 25px;
+    background-color: #e9e5d5;
+    color: #969280;
     border-style: solid;
     border-width: 1px;
     border-color: #aca99a;
     padding: 7px;
+    box-shadow: 3px 3px 0px rgb(206, 200, 196);
 }
 
 .dropdown:hover {
@@ -71,41 +84,33 @@ h2 {
     width: 65%;
     text-align: left;
     margin-bottom: 5px;
+    text-shadow: 2px 2px 0px rgb(206, 200, 196);
 }
 
 .button {
     width: 65%;
-    border-width: 0;
-    padding: 15px;
-    border-radius: 10px;
+    border-width: 1;
+    border-style: solid;
+    border-color: #31ad6f;
+    background-color: rgb(113, 230, 171);
+    padding: 5px;
+    font-family: 'Jersey 10';
     color: white;
-    font-size: 100%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-stroke-width: 1px;
+    text-stroke-color: black;
+    font-size: 30px;
     font-weight: bold;
-    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 0px rgb(206, 200, 196);
 }
 
 .button:hover {
     cursor: pointer;
-    opacity: 0.7;
-    transform: scale(1.1);
-}
+    translate: 0 -5px;
 
-#buttonCurrency {
-    background-color: rgb(171, 223, 142);
-}
-
-#buttonUnit {
-    background-color: rgb(236, 190, 104);
-}
-
-#buttonTemperature {
-    background-color: rgb(92, 211, 211);
-}
-
-#buttonTime {
-    background-color: rgb(207, 108, 91);
 }
 
 .textDOM {
-    font-size: 20px;
+    font-size: 15px;
 }
